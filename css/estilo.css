@@ -1,0 +1,327 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F1E0D6;
+    color: #5D3A29;
+}
+
+.header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+    padding: 25px 60px;
+    background: linear-gradient(135deg, #D3BEB2, #F1E0D6);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    border-radius: 25px;
+    border: 2px solid #8B4513;
+    z-index: 1000;
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+.navigation {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+
+}
+
+.navigation a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #8B4513;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: rgba(241, 224, 214, 0.95);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid #8B4513;
+    border-radius: 40px;
+}
+
+.navigation a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(200, 168, 156, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
+    z-index: -1;
+
+}
+
+.navigation a:hover::before {
+    width: 120%;
+    height: 120%;
+    border: 2px solid #8B4513;
+    border-radius: 40px;
+}
+
+.navigation a:hover {
+    color: #8B4513;
+    transform: scale(1.1);
+    border: 2px solid #8B4513;
+    border-radius: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 180px;
+    padding: 0 20px;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.middle-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #8B4513;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 3px;
+}
+
+.category {
+    text-align: center;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.category img,
+.produto img {
+    width: 100%;
+    height: 380px; 
+    object-fit: contain; 
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: block;
+    background: none;
+}
+
+.view-more {
+    padding: 12px 28px;
+    background-color: #D3BEB2;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #5D3A29;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-more:hover {
+    background-color: #C0A89C;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #D3BEB2;
+    color: #5D3A29;
+    margin-top: 60px;
+    border-radius: 12px;
+}
+
+.alert {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 300px;
+    text-align: center;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+button, input[type="submit"] {
+    padding: 12px 25px;
+    background-color: #D3BEB2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #5D3A29;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #C0A89C;
+    transform: scale(1.05);
+}
+
+.login-container, .cadastro-container, .painel {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.painel {
+    max-width: 950px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: bold;
+}
+
+.usuario-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.card-usuario {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.card-usuario p {
+    margin: 6px 0;
+    color: #333;
+}
+
+.btn-excluir {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.btn-excluir:hover {
+    background-color: #c82333;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 25px;
+}
+
+.produto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+    width: 360px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.produto h3 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.produto p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.produto button {
+    margin-top: 15px;
+    background-color: #28a745;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 8px;
+}
+
+.produto button:hover {
+    background-color: #218838;
+}
+
+main p {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 0 20px;
+}

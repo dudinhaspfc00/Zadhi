@@ -1,0 +1,130 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 07-Set-2025 às 22:29
+-- Versão do servidor: 10.4.32-MariaDB
+-- versão do PHP: 8.0.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `bdzadhi`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbadm`
+--
+
+CREATE TABLE `tbadm` (
+  `codadm` int(11) NOT NULL,
+  `email` varchar(90) DEFAULT NULL,
+  `senha` varchar(90) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbclientes`
+--
+
+CREATE TABLE `tbclientes` (
+  `codcliente` int(11) NOT NULL,
+  `nome` varchar(90) DEFAULT NULL,
+  `email` varchar(90) DEFAULT NULL,
+  `senha` varchar(90) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `tbclientes`
+--
+
+INSERT INTO `tbclientes` (`codcliente`, `nome`, `email`, `senha`) VALUES
+(1, 'i', 'i', '042dc4512fa3d391c5170cf3aa61e6a638f84342');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbprodutos`
+--
+
+CREATE TABLE `tbprodutos` (
+  `codproduto` int(11) NOT NULL,
+  `produto` varchar(90) NOT NULL,
+  `preco` varchar(90) NOT NULL,
+  `modelo` varchar(90) NOT NULL,
+  `genero` varchar(90) NOT NULL,
+  `foto` varchar(90) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `tbprodutos`
+--
+
+INSERT INTO `tbprodutos` (`codproduto`, `produto`, `preco`, `modelo`, `genero`, `foto`) VALUES
+(1, 'Vestido Azul', 'R$349,99', 'Vestido Longo Azul', 'Fem', '10da97aef8d57c23105932e6b688ca4a.png'),
+(2, 'Vestido Rosa', 'R$399,99', 'Vestido Longo Com Glitter Rosa', 'Fem', '20f00987b4b4a8d5ea92b24fee2ecbcb.png'),
+(3, 'Vestido Vermelho', 'R$299,99', 'Vestido Curto Vermelho', 'Fem', '5c00fce82da0196c51ae4f2c4bec9723.png'),
+(4, 'Camiseta Cinza', 'R$349,99', 'Camiseta Cinza', 'Masc', '8e77aa5dd9bd8f3f315c0ce7a675f5f4.png'),
+(5, 'Blazer Preta', 'R$599,99', 'Blazer Preto', 'Masc', '0cf8904141c1fbdda64da93ef384549f.png'),
+(6, 'Calça Preta', 'R$419,99', 'Calça Preta', 'Masc', '7d15692e79b7d0835a2e3093c728f10a.png');
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `tbadm`
+--
+ALTER TABLE `tbadm`
+  ADD PRIMARY KEY (`codadm`);
+
+--
+-- Índices para tabela `tbclientes`
+--
+ALTER TABLE `tbclientes`
+  ADD PRIMARY KEY (`codcliente`);
+
+--
+-- Índices para tabela `tbprodutos`
+--
+ALTER TABLE `tbprodutos`
+  ADD PRIMARY KEY (`codproduto`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `tbadm`
+--
+ALTER TABLE `tbadm`
+  MODIFY `codadm` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `tbclientes`
+--
+ALTER TABLE `tbclientes`
+  MODIFY `codcliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `tbprodutos`
+--
+ALTER TABLE `tbprodutos`
+  MODIFY `codproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
