@@ -3,7 +3,7 @@
         public static $usuario = "root";
         public static $senha = "";
         private static $connect = null;
-        
+     
         private static function Conectar()
         {
              try {
